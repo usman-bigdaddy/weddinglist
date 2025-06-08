@@ -49,12 +49,12 @@ export default function RSVPPage() {
         <div className="bg-gradient-to-r from-rose-700 to-rose-900 p-6 text-center relative">
           <div className="absolute top-0 left-0 right-0 h-1 bg-gold-500"></div>
           <h1 className="text-3xl font-cormorant font-bold text-rose-50 tracking-wider">
-            Usman  & Fatima
+            Usman & Fatima
           </h1>
           <div className="mt-4 pt-4 border-t border-rose-300/30">
             <p className="text-rose-100 font-medium">Reception Celebration</p>
             <p className="text-rose-50 font-cormorant text-lg">
-              June 28, 2025 • 2:00 PM
+              June 28, 2025 • 4:00 PM
             </p>
             <p className="text-rose-200 text-sm mt-1">Arewa House, Kaduna</p>
           </div>
@@ -111,17 +111,18 @@ export default function RSVPPage() {
                   RSVP Received!
                 </h2>
                 <p className="text-rose-700 mt-2">
-                  Kindly present your IV code at the venue.
+                  Present your IV code at the venue.
                 </p>
               </div>
               
               <div className="bg-rose-50 p-4 rounded-lg border border-rose-200">
-                {/* <p className="text-rose-800 font-medium mb-2">Your Invitation Code:</p>
+                <p className="text-rose-800 font-medium mb-2">Your Invitation Code:</p>
                 <p className="text-2xl font-mono font-bold text-rose-900 mb-4">{otp}</p>
-                 */}
+                
                 <div className="flex justify-center">
                   <BarcodeGenerator otp={otp} />
-                </div>   
+                </div>
+                
             
               </div>
             </div>
