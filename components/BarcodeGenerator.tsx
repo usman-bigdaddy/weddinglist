@@ -12,13 +12,26 @@ export default function BarcodeGenerator({ otp }: { otp: string }) {
     
     setIsDownloading(true);
     try {
+      // Create a clone with simplified styles
       const element = qrCodeRef.current.cloneNode(true) as HTMLElement;
+      
+      // Apply compatible styles
       element.style.backgroundColor = '#fdf2f8';
       element.style.color = '#831843';
       element.style.padding = '24px';
       element.style.borderRadius = '8px';
       element.style.position = 'fixed';
       element.style.left = '-9999px';
+      
+      // Replace any modern color functions in child elements
+      const elements = element.querySelectorAll('*');
+      elements.forEach(el => {
+        if (el instanceof HTMLElement) {
+          if (el.style.color.includes('oklch')) el.style.color = '#831843';
+          if (el.style.backgroundColor.includes('oklch')) el.style.backgroundColor = '#fdf2f8';
+        }
+      });
+
       document.body.appendChild(element);
 
       const canvas = await html2canvas(element, {
@@ -43,22 +56,26 @@ export default function BarcodeGenerator({ otp }: { otp: string }) {
 
   return (
     <div className="space-y-4">
-      {/* Main card with QR and details */}
+      {/* Main card - using only hex colors */}
       <div 
         ref={qrCodeRef}
-        className="relative p-6 bg-[#fdf2f8] rounded-lg shadow-md flex flex-col items-center border-2 border-rose-200"
+        className="relative p-6 rounded-lg shadow-md flex flex-col items-center border-2 border-[#fbcfe8]"
         style={{
           backgroundColor: '#fdf2f8',
           color: '#831843',
           minWidth: '250px',
         }}
       >
-        {/* Download button positioned at top-right */}
+        {/* Download button */}
         <button
           onClick={handleDownload}
           disabled={isDownloading}
           className="absolute -top-3 -right-3 flex items-center justify-center gap-1 px-3 py-2 bg-[#831843] hover:bg-[#6b1435] text-white rounded-full shadow-lg transition-colors disabled:opacity-70 z-10"
           title="Download IV Card"
+          style={{
+            backgroundColor: '#831843',
+            color: 'white',
+          }}
         >
           {isDownloading ? (
             <svg className="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -73,11 +90,22 @@ export default function BarcodeGenerator({ otp }: { otp: string }) {
           <span className="sr-only">Download</span>
         </button>
 
-        <h3 className="text-lg font-bold mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+        <h3 
+          className="text-lg font-bold mb-4" 
+          style={{ 
+            fontFamily: "'Cormorant Garamond', serif",
+            color: '#831843'
+          }}
+        >
           Usman & Fatima
         </h3>
         
-        <div className="p-2 bg-white rounded-md mb-4">
+        <div 
+          className="p-2 rounded-md mb-4"
+          style={{
+            backgroundColor: 'white'
+          }}
+        >
           <QRCodeSVG 
             value={verificationUrl}
             size={180}
@@ -87,30 +115,37 @@ export default function BarcodeGenerator({ otp }: { otp: string }) {
           />
         </div>
         
-        <div className="text-center mb-4">
+        <div className="text-center mb-4" style={{ color: '#831843' }}>
           <p className="text-sm font-medium">Your Invitation Code</p>
-          <p className="text-2xl font-mono font-bold tracking-wider" style={{ color: '#831843' }}>
+          <p className="text-2xl font-mono font-bold tracking-wider">
             {otp.match(/.{1,3}/g)?.join(' ')}
           </p>
         </div>
         
-        <div className="text-center text-xs">
+        <div className="text-center text-xs" style={{ color: '#831843' }}>
           <p>Reception: June 28, 2025 at 2:00 PM</p>
-          <p><a
-  href="https://www.google.com/maps?q=Arewa+House,+Kaduna"
-  target="_blank"
-  rel="noopener noreferrer"
-  className=" mt-1 underline transition-colors"
->
-  Arewa House, Kaduna
-</a></p>
+          <p>
+            <a
+              href="https://www.google.com/maps?q=Arewa+House,+Kaduna"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: '#831843' }}
+              className="mt-1 underline"
+            >
+              Arewa House, Kaduna
+            </a>
+          </p>
         </div>
 
-        {/* Secondary download button at bottom for better visibility */}
+        {/* Secondary download button */}
         <button
           onClick={handleDownload}
           disabled={isDownloading}
-          className="mt-4 w-full flex items-center justify-center gap-2 px-4 py-2 bg-[#831843] hover:bg-[#6b1435] text-white rounded-md transition-colors disabled:opacity-70 text-sm"
+          className="mt-4 w-full flex items-center justify-center gap-2 px-4 py-2 rounded-md transition-colors disabled:opacity-70 text-sm"
+          style={{
+            backgroundColor: '#831843',
+            color: 'white',
+          }}
         >
           {isDownloading ? (
             'Downloading...'
@@ -125,10 +160,9 @@ export default function BarcodeGenerator({ otp }: { otp: string }) {
         </button>
       </div>
 
-<p className="text-xs text-center text-[#831843] px-4">
-  Tip: Download or screenshot the IV for easy access at the venue
-</p>
-
+      <p className="text-xs text-center px-4" style={{ color: '#831843' }}>
+      Tip: Download or screenshot the IV for easy access at the venue
+      </p>
     </div>
   );
 }
