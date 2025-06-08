@@ -125,9 +125,10 @@ export default function BarcodeGenerator({ otp }: { otp: string }) {
         </button>
       </div>
 
-      <p className="text-xs text-center text-[#831843] px-4">
-        Tip: Save this to your phone photos for quick access at the venue
-      </p>
+<p className="text-xs text-center text-[#831843] px-4">
+  Tip: Download or screenshot the IV for easy access at the venue
+</p>
+
     </div>
   );
 }
