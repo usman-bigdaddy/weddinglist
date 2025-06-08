@@ -95,6 +95,7 @@ export default function VerificationPanel() {
     } catch (error) {
       showErrorAlert("Error", "Verification process failed");
     } finally {
+      setOtp("");
       setLoading(false);
     }
   };
@@ -153,7 +154,7 @@ export default function VerificationPanel() {
                     type="number"
                     value={otp}
                     onChange={(e) => setOtp(e.target.value)}
-                    placeholder="Enter 6-digit code"
+                    placeholder="Enter IV code"
                     className="w-full px-4 py-3 text-gray-900 border border-pink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
                   />
                 </div>
@@ -246,13 +247,6 @@ export default function VerificationPanel() {
               )}
             </>
           )}
-        </div>
-
-        {/* Footer */}
-        <div className="bg-pink-100/50 p-4 text-center border-t border-pink-200">
-          <p className="text-xs text-pink-600">
-            Wedding of Big Daddy & Fatima • June 28, 2025 • Arewa House, Kaduna
-          </p>
         </div>
       </div>
     </div>
