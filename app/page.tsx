@@ -79,7 +79,15 @@ export default function RSVPPage() {
             <p className="text-rose-50 font-cormorant text-lg">
               June 28, 2025 • 2:00 PM
             </p>
-            <p className="text-rose-200 text-sm mt-1">Arewa House, Kaduna</p>
+            <p className="text-rose-200 text-sm mt-1"><a
+  href="https://www.google.com/maps?q=Arewa+House,+Kaduna"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-rose-200 text-sm mt-1 underline hover:text-rose-100 transition-colors"
+>
+  Arewa House, Kaduna
+</a>
+</p>
           </div>
         </div>
         
@@ -87,14 +95,12 @@ export default function RSVPPage() {
         <div className="p-6">
           {!submitted ? (
             <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="text-center mb-4">
-                <h2 className="text-2xl font-cormorant text-rose-900 font-medium">
-                  Kindly RSVP
-                </h2>
-                <p className="text-rose-600 text-sm mt-1">
-                  Please respond by June 20, 2025
-                </p>
-              </div>
+              <div className="text-center mb-4 px-4 py-5 bg-rose-50 border border-rose-200 rounded-lg shadow-sm">
+  <h2 className="font-cormorant text-rose-900 font-semibold">
+  Kindly RSVP on or before <span className="text-rose-700 underline">June 20, 2025</span>
+  </h2>
+</div>
+
               
               <div>
                 <label className="block text-rose-900 mb-1 font-medium">Full Name</label>
