@@ -92,6 +92,7 @@ export default function RSVPListPanel() {
           </div>
         ) : (
           <div className="overflow-x-auto">
+            <p>{rsvps.length} RSVPs found </p>
             <table className="min-w-full bg-pink-50 rounded-lg overflow-hidden">
               <thead className="bg-pink-100">
                 <tr>
