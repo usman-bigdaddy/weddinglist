@@ -90,15 +90,16 @@ export default function BarcodeGenerator({ otp }: { otp: string }) {
           <span className="sr-only">Download</span>
         </button>
 
-        <h3 
-          className="text-lg font-bold mb-4" 
-          style={{ 
-            fontFamily: "'Cormorant Garamond', serif",
-            color: '#831843'
-          }}
-        >
-          Usman (Big Daddy) & Fatima
-        </h3>
+      <h3
+  className="text-[4vw] sm:text-[2.5vw] md:text-lg font-bold mb-4 text-center whitespace-nowrap"
+  style={{
+    fontFamily: "'Cormorant Garamond', serif",
+    color: '#831843'
+  }}
+>
+  Usman (Big Daddy) & Fatima
+</h3>
+
         
         <div 
           className="p-2 rounded-md mb-4"

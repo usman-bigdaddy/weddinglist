@@ -70,11 +70,12 @@ export default function RSVPPage() {
         {/* Wedding Header */}
         <div className="bg-gradient-to-r from-rose-700 to-rose-900 p-6 text-center relative">
           <div className="absolute top-0 left-0 right-0 h-1 bg-amber-400"></div>
-          <h1 className="text-3xl font-cormorant font-bold text-rose-50 tracking-wider">
-            Usman (Big Daddy) & Fatima
-          </h1>
+   <h1 className="text-xl md:text-2xl font-cormorant font-bold text-rose-50 tracking-wide text-center whitespace-nowrap overflow-hidden text-ellipsis [font-size:4vw] sm:[font-size:2vw] md:text-2xl">
+  Usman (Big Daddy) & Fatima
+</h1>
 
-          <div className="mt-4 pt-4 border-t border-rose-300/30">
+
+          <div className="mt-2 pt-2 border-t border-rose-300/30">
             <p className="text-rose-100 font-medium">Reception Celebration</p>
             <p className="text-rose-50 font-cormorant text-lg">
               June 28, 2025 • 2:00 PM
@@ -92,10 +93,10 @@ export default function RSVPPage() {
         </div>
 
         {/* Form Content */}
-        <div className="p-6">
+        <div className="p-5">
           {!submitted ? (
             <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="text-center mb-4 px-4 py-5 bg-rose-50 border border-rose-200 rounded-lg shadow-sm">
+              <div className="text-center mb-2 px-4 py-5 bg-rose-50 border border-rose-200 rounded-lg shadow-sm">
                 <h2 className="font-cormorant text-rose-900 font-semibold">
                   Kindly RSVP on or before <span className="text-rose-700 underline">June 20, 2025</span>
                 </h2>
