@@ -97,7 +97,7 @@ export default function BarcodeGenerator({ otp }: { otp: string }) {
             color: '#831843'
           }}
         >
-          Usman & Fatima
+          Usman (Big Daddy) & Fatima
         </h3>
         
         <div 

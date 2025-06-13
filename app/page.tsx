@@ -16,7 +16,7 @@ export default function RSVPPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    
+
     try {
       const response = await fetch('/api/register', {
         method: 'POST',
@@ -25,9 +25,9 @@ export default function RSVPPage() {
         },
         body: JSON.stringify(formData),
       });
-      
+
       const data = await response.json();
-      
+
       if (data.success) {
         setOtp(data.otp);
         setSubmitted(true);
@@ -71,63 +71,63 @@ export default function RSVPPage() {
         <div className="bg-gradient-to-r from-rose-700 to-rose-900 p-6 text-center relative">
           <div className="absolute top-0 left-0 right-0 h-1 bg-amber-400"></div>
           <h1 className="text-3xl font-cormorant font-bold text-rose-50 tracking-wider">
-            Usman & Fatima
+            Usman (Big Daddy) & Fatima
           </h1>
-          
+
           <div className="mt-4 pt-4 border-t border-rose-300/30">
             <p className="text-rose-100 font-medium">Reception Celebration</p>
             <p className="text-rose-50 font-cormorant text-lg">
               June 28, 2025 • 2:00 PM
             </p>
             <p className="text-rose-200 text-sm mt-1"><a
-  href="https://www.google.com/maps?q=Arewa+House,+Kaduna"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="text-rose-200 text-sm mt-1 underline hover:text-rose-100 transition-colors"
->
-  Arewa House, Kaduna
-</a>
-</p>
+              href="https://www.google.com/maps?q=Arewa+House,+Kaduna"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-rose-200 text-sm mt-1 underline hover:text-rose-100 transition-colors"
+            >
+              Arewa House, Kaduna
+            </a>
+            </p>
           </div>
         </div>
-        
+
         {/* Form Content */}
         <div className="p-6">
           {!submitted ? (
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="text-center mb-4 px-4 py-5 bg-rose-50 border border-rose-200 rounded-lg shadow-sm">
-  <h2 className="font-cormorant text-rose-900 font-semibold">
-  Kindly RSVP on or before <span className="text-rose-700 underline">June 20, 2025</span>
-  </h2>
-</div>
+                <h2 className="font-cormorant text-rose-900 font-semibold">
+                  Kindly RSVP on or before <span className="text-rose-700 underline">June 20, 2025</span>
+                </h2>
+              </div>
 
-              
+
               <div>
                 <label className="block text-rose-900 mb-1 font-medium">Full Name</label>
                 <input
                   type="text"
                   value={formData.fullName}
-                  onChange={(e) => setFormData({...formData, fullName: e.target.value})}
+                  onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                   className="w-full px-4 py-3 text-gray-900 border border-rose-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent"
                   required
                   placeholder="Your full name"
                   disabled={isLoading}
                 />
               </div>
-              
+
               <div>
                 <label className="block text-rose-900 mb-1 font-medium">Email</label>
                 <input
                   type="email"
                   value={formData.email}
-                  onChange={(e) => setFormData({...formData, email: e.target.value})}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full px-4 py-3 text-gray-900 border border-rose-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent"
                   required
                   placeholder="Your email address"
                   disabled={isLoading}
                 />
               </div>
-              
+
               <button
                 type="submit"
                 disabled={isLoading}
@@ -158,27 +158,27 @@ export default function RSVPPage() {
                   Thank You!
                 </h2>
               </div>
-              
+
               <div className="bg-rose-50 p-4 rounded-lg border border-rose-200">
-                
+
                 <div className="flex justify-center">
                   <BarcodeGenerator otp={otp} />
                 </div>
               </div>
-              
+
             </div>
           )}
         </div>
-        
+
         {/* Footer */}
-       <div className="bg-rose-100/50 p-4 text-center border-t border-rose-200">
-  <p className="text-xs text-rose-600">
-    For any changes to your RSVP, please contact the wedding planner at{' '}
-    <a href="tel:07039350125" className="underline text-rose-700 font-medium">
-      07039350125
-    </a>
-  </p>
-</div>
+        <div className="bg-rose-100/50 p-4 text-center border-t border-rose-200">
+          <p className="text-xs text-rose-600">
+            For any changes to your RSVP, please contact the wedding planner at{' '}
+            <a href="tel:07039350125" className="underline text-rose-700 font-medium">
+              07039350125
+            </a>
+          </p>
+        </div>
 
       </div>
     </div>
