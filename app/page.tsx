@@ -98,7 +98,7 @@ export default function RSVPPage() {
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="text-center mb-2 px-4 py-5 bg-rose-50 border border-rose-200 rounded-lg shadow-sm">
                 <h2 className="font-cormorant text-rose-900 font-semibold">
-                  Kindly RSVP on or before <span className="text-rose-700 underline">June 20, 2025</span>
+                  Kindly RSVP on or before <span className="text-rose-700 underline">June 25, 2025</span>
                 </h2>
               </div>
 
