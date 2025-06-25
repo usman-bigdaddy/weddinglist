@@ -24,6 +24,7 @@ export async function GET(request: Request) {
         fullName: guest.fullName,
         email: guest.email,
         otp: guest.otp,
+        seatNumber: guest.seatNumber,
         isVerified: guest.isVerified,
         verifiedAt: guest.verifiedAt,
       }
