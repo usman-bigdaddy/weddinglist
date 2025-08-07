@@ -121,7 +121,7 @@ export default function VerificationPanel() {
             Guest Verification
           </h2>
           <p className="text-pink-200 mt-1 text-sm">
-            Verify guests for Usman & Fatima's Wedding
+            Verify guests for Farida & Najib's Wedding
           </p>
         </div>
 
@@ -238,17 +238,6 @@ export default function VerificationPanel() {
                       <p className="text-sm text-pink-600">Guest Name</p>
                       <p className="text-2xl font-bold text-pink-900 truncate">
                         {guest.fullName}
-                      </p>
-                    </div>
-
-                    <div className="flex-1 bg-white p-4 rounded-lg shadow-sm border border-pink-100">
-                      <p className="text-sm text-pink-600">Seat Number</p>
-                      <p
-                        className={`text-2xl font-bold ${
-                          guest.seatNumber ? "text-amber-600" : "text-gray-400"
-                        }`}
-                      >
-                        {guest.seatNumber || "Not assigned"}
                       </p>
                     </div>
                   </div>

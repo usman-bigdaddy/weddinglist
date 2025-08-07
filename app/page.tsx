@@ -15,8 +15,8 @@ export default function RSVPPage() {
   const [deadlinePassed, setDeadlinePassed] = useState(false);
 
   useEffect(() => {
-    // Check if current date is after June 27, 2025
-    const rsvpDeadline = new Date("2025-06-27T23:59:59");
+    // Check if current date is after August 23, 2025
+    const rsvpDeadline = new Date("2025-08-23T23:59:59");
     const currentDate = new Date();
     setDeadlinePassed(currentDate > rsvpDeadline);
   }, []);
@@ -46,9 +46,9 @@ export default function RSVPPage() {
           title: "Something went wrong!",
           text: data.error || "Registration failed. Please try again.",
           icon: "error",
-          confirmButtonColor: "#831843",
-          background: "#fff1f2",
-          iconColor: "#831843",
+          confirmButtonColor: "#B8860B",
+          background: "#FFF8E1",
+          iconColor: "#D4AF37",
         });
       }
     } catch (error) {
@@ -57,9 +57,9 @@ export default function RSVPPage() {
         title: "Connection Error",
         text: "Could not submit your RSVP. Please check your connection and try again.",
         icon: "error",
-        confirmButtonColor: "#831843",
-        background: "#fff1f2",
-        iconColor: "#831843",
+        confirmButtonColor: "#B8860B",
+        background: "#FFF8E1",
+        iconColor: "#D4AF37",
       });
     } finally {
       setIsLoading(false);
@@ -68,27 +68,27 @@ export default function RSVPPage() {
 
   if (deadlinePassed) {
     return (
-      <div className="min-h-screen bg-rose-50 flex items-center justify-center p-4 bg-[url('/images/wedding-pattern.png')] bg-opacity-20">
-        <div className="w-full max-w-md bg-white/90 backdrop-blur-md rounded-xl shadow-xl overflow-hidden border border-rose-200/50">
+      <div className="min-h-screen bg-amber-50 flex items-center justify-center p-4 bg-[url('/images/wedding-pattern-gold.png')] bg-opacity-20">
+        <div className="w-full max-w-md bg-white/90 backdrop-blur-md rounded-xl shadow-xl overflow-hidden border border-amber-200/50">
           {/* Wedding Header */}
-          <div className="bg-gradient-to-r from-rose-700 to-rose-900 p-6 text-center relative">
+          <div className="bg-gradient-to-r from-amber-700 to-amber-900 p-6 text-center relative">
             <div className="absolute top-0 left-0 right-0 h-1 bg-amber-400"></div>
-            <h1 className="text-xl md:text-2xl font-cormorant font-bold text-rose-50 tracking-wide text-center whitespace-nowrap overflow-hidden text-ellipsis [font-size:4vw] sm:[font-size:2vw] md:text-2xl">
-              Usman (Big Daddy) & Fatima
+            <h1 className="text-xl md:text-2xl font-cormorant font-bold text-amber-50 tracking-wide text-center whitespace-nowrap overflow-hidden text-ellipsis [font-size:4vw] sm:[font-size:2vw] md:text-2xl">
+              Farida & Najib
             </h1>
-            <div className="mt-2 pt-2 border-t border-rose-300/30">
-              <p className="text-rose-100 font-medium">Reception Celebration</p>
-              <p className="text-rose-50 font-cormorant text-lg">
-                June 28, 2025 • 2:00 PM
+            <div className="mt-2 pt-2 border-t border-amber-300/30">
+              <p className="text-amber-100 font-medium">Wedding Celebration</p>
+              <p className="text-amber-50 font-cormorant text-lg">
+                August 24, 2025 • 2:00 PM
               </p>
-              <p className="text-rose-200 text-sm mt-1">
+              <p className="text-amber-200 text-sm mt-1">
                 <a
-                  href="https://www.google.com/maps?q=Arewa+House,+Kaduna"
+                  href="https://www.google.com/maps?q=Merry+Makers+Event+Centre,+Plot+702+Kashim+Ibrahim+Way+wuse+2"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-rose-200 text-sm mt-1 underline hover:text-rose-100 transition-colors"
+                  className="text-amber-200 text-sm mt-1 underline hover:text-amber-100 transition-colors"
                 >
-                  Arewa House, Kaduna
+                  Merry Makers Event Centre, Plot 702 Kashim Ibrahim Way wuse 2
                 </a>
               </p>
             </div>
@@ -99,7 +99,7 @@ export default function RSVPPage() {
             <div className="mb-6">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-16 w-16 mx-auto text-rose-400"
+                className="h-16 w-16 mx-auto text-amber-400"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -112,27 +112,27 @@ export default function RSVPPage() {
                 />
               </svg>
             </div>
-            <h2 className="text-2xl font-cormorant text-rose-900 font-semibold mb-4">
+            <h2 className="text-2xl font-cormorant text-amber-900 font-semibold mb-4">
               Thank You for Your Interest
             </h2>
-            <p className="text-rose-700 mb-6">
-              The RSVP period for our wedding has now closed as of June 27,
+            <p className="text-amber-700 mb-6">
+              The RSVP period for our wedding has now closed as of August 23,
               2025.
             </p>
-            <p className="text-rose-600">
+            {/* <p className="text-amber-600">
               For any inquiries, please contact the wedding planner at{" "}
               <a
                 href="tel:07039350125"
-                className="underline text-rose-700 font-medium"
+                className="underline text-amber-700 font-medium"
               >
                 07039350125
               </a>
-            </p>
+            </p> */}
           </div>
 
           {/* Footer */}
-          <div className="bg-rose-100/50 p-4 text-center border-t border-rose-200">
-            <p className="text-xs text-rose-600">
+          <div className="bg-amber-100/50 p-4 text-center border-t border-amber-200">
+            <p className="text-xs text-amber-600">
               We look forward to celebrating with you!
             </p>
           </div>
@@ -142,27 +142,27 @@ export default function RSVPPage() {
   }
 
   return (
-    <div className="min-h-screen bg-rose-50 flex items-center justify-center p-4 bg-[url('/images/wedding-pattern.png')] bg-opacity-20">
-      <div className="w-full max-w-md bg-white/90 backdrop-blur-md rounded-xl shadow-xl overflow-hidden border border-rose-200/50">
+    <div className="min-h-screen bg-amber-50 flex items-center justify-center p-4 bg-[url('/images/wedding-pattern-gold.png')] bg-opacity-20">
+      <div className="w-full max-w-md bg-white/90 backdrop-blur-md rounded-xl shadow-xl overflow-hidden border border-amber-200/50">
         {/* Wedding Header */}
-        <div className="bg-gradient-to-r from-rose-700 to-rose-900 p-6 text-center relative">
+        <div className="bg-gradient-to-r from-amber-700 to-amber-900 p-6 text-center relative">
           <div className="absolute top-0 left-0 right-0 h-1 bg-amber-400"></div>
-          <h1 className="text-xl md:text-2xl font-cormorant font-bold text-rose-50 tracking-wide text-center whitespace-nowrap overflow-hidden text-ellipsis [font-size:4vw] sm:[font-size:2vw] md:text-2xl">
-            Usman (Big Daddy) & Fatima
+          <h1 className="text-xl md:text-2xl font-cormorant font-bold text-amber-50 tracking-wide text-center whitespace-nowrap overflow-hidden text-ellipsis [font-size:4vw] sm:[font-size:2vw] md:text-2xl">
+            Farida & Najib
           </h1>
-          <div className="mt-2 pt-2 border-t border-rose-300/30">
-            <p className="text-rose-100 font-medium">Reception Celebration</p>
-            <p className="text-rose-50 font-cormorant text-lg">
-              June 28, 2025 • 2:00 PM
+          <div className="mt-2 pt-2 border-t border-amber-300/30">
+            <p className="text-amber-100 font-medium">Wedding Celebration</p>
+            <p className="text-amber-50 font-cormorant text-lg">
+              August 24, 2025 • 2:00 PM
             </p>
-            <p className="text-rose-200 text-sm mt-1">
+            <p className="text-amber-200 text-sm mt-1">
               <a
-                href="https://www.google.com/maps?q=Arewa+House,+Kaduna"
+                href="https://www.google.com/maps?q=Merry+Makers+Event+Centre,+Plot+702+Kashim+Ibrahim+Way+wuse+2"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-rose-200 text-sm mt-1 underline hover:text-rose-100 transition-colors"
+                className="text-amber-200 text-sm mt-1 underline hover:text-amber-100 transition-colors"
               >
-                Arewa House, Kaduna
+                Merry Makers Event Centre, Plot 702 Kashim Ibrahim Way wuse 2
               </a>
             </p>
           </div>
@@ -172,15 +172,17 @@ export default function RSVPPage() {
         <div className="p-5">
           {!submitted ? (
             <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="text-center mb-2 px-4 py-5 bg-rose-50 border border-rose-200 rounded-lg shadow-sm">
-                <h2 className="font-cormorant text-rose-900 font-semibold">
+              <div className="text-center mb-2 px-4 py-5 bg-amber-50 border border-amber-200 rounded-lg shadow-sm">
+                <h2 className="font-cormorant text-amber-900 font-semibold">
                   Kindly RSVP on or before{" "}
-                  <span className="text-rose-700 underline">June 25, 2025</span>
+                  <span className="text-amber-700 underline">
+                    August 23, 2025
+                  </span>
                 </h2>
               </div>
 
               <div>
-                <label className="block text-rose-900 mb-1 font-medium">
+                <label className="block text-amber-900 mb-1 font-medium">
                   Full Name
                 </label>
                 <input
@@ -189,7 +191,7 @@ export default function RSVPPage() {
                   onChange={(e) =>
                     setFormData({ ...formData, fullName: e.target.value })
                   }
-                  className="w-full px-4 py-3 text-gray-900 border border-rose-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+                  className="w-full px-4 py-3 text-gray-900 border border-amber-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                   required
                   placeholder="Your full name"
                   disabled={isLoading}
@@ -197,7 +199,7 @@ export default function RSVPPage() {
               </div>
 
               <div>
-                <label className="block text-rose-900 mb-1 font-medium">
+                <label className="block text-amber-900 mb-1 font-medium">
                   Email
                 </label>
                 <input
@@ -206,7 +208,7 @@ export default function RSVPPage() {
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
-                  className="w-full px-4 py-3 text-gray-900 border border-rose-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+                  className="w-full px-4 py-3 text-gray-900 border border-amber-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                   required
                   placeholder="Your email address"
                   disabled={isLoading}
@@ -216,7 +218,7 @@ export default function RSVPPage() {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full px-4 py-3 bg-rose-600 hover:bg-rose-700 text-white rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg mt-6 flex items-center justify-center gap-2 disabled:opacity-75 disabled:cursor-not-allowed"
+                className="w-full px-4 py-3 bg-amber-600 hover:bg-amber-700 text-white rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg mt-6 flex items-center justify-center gap-2 disabled:opacity-75 disabled:cursor-not-allowed"
               >
                 {isLoading ? (
                   <>
@@ -264,12 +266,12 @@ export default function RSVPPage() {
           ) : (
             <div className="text-center space-y-6">
               <div className="mb-4">
-                <h2 className="text-2xl font-cormorant text-rose-900 font-medium">
+                <h2 className="text-2xl font-cormorant text-amber-900 font-medium">
                   Thank You!
                 </h2>
               </div>
 
-              <div className="bg-rose-50 p-4 rounded-lg border border-rose-200">
+              <div className="bg-amber-50 p-4 rounded-lg border border-amber-200">
                 <div className="flex justify-center">
                   <BarcodeGenerator otp={otp} />
                 </div>
@@ -279,17 +281,17 @@ export default function RSVPPage() {
         </div>
 
         {/* Footer */}
-        <div className="bg-rose-100/50 p-4 text-center border-t border-rose-200">
-          <p className="text-xs text-rose-600">
+        {/* <div className="bg-amber-100/50 p-4 text-center border-t border-amber-200">
+          <p className="text-xs text-amber-600">
             For any changes to your RSVP, please contact the wedding planner at{" "}
             <a
               href="tel:07039350125"
-              className="underline text-rose-700 font-medium"
+              className="underline text-amber-700 font-medium"
             >
               07039350125
             </a>
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

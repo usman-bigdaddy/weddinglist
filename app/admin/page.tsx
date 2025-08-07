@@ -178,7 +178,6 @@ export default function RSVPListPanel() {
                 <tr>
                   <th className="px-4 py-3 text-left text-pink-900">Name</th>
                   <th className="px-4 py-3 text-left text-pink-900">Email</th>
-                  <th className="px-4 py-3 text-left text-pink-900">Seat</th>
                   <th className="px-4 py-3 text-left text-pink-900">OTP</th>
                   <th className="px-4 py-3 text-left text-pink-900">Status</th>
                   <th className="px-4 py-3 text-left text-pink-900">
@@ -187,7 +186,7 @@ export default function RSVPListPanel() {
                   <th className="px-4 py-3 text-left text-pink-900">
                     Verified At
                   </th>
-                  <th className="px-4 py-3 text-left text-pink-900">Actions</th>
+                  {/* <th className="px-4 py-3 text-left text-pink-900">Actions</th> */}
                 </tr>
               </thead>
               <tbody>
@@ -198,9 +197,6 @@ export default function RSVPListPanel() {
                   >
                     <td className="px-4 py-3 text-pink-900">{rsvp.fullName}</td>
                     <td className="px-4 py-3 text-pink-900">{rsvp.email}</td>
-                    <td className="px-4 py-3 text-pink-900 font-mono">
-                      {rsvp.seatNumber || "--"}
-                    </td>
                     <td className="px-4 py-3 text-pink-900 font-mono">
                       {rsvp.otp}
                     </td>
@@ -223,14 +219,14 @@ export default function RSVPListPanel() {
                         ? new Date(rsvp.verifiedAt).toLocaleString()
                         : "--"}
                     </td>
-                    <td className="px-4 py-3">
+                    {/* <td className="px-4 py-3">
                       <button
                         onClick={() => openSeatModal(rsvp)}
                         className="px-3 py-1 bg-pink-600 text-white rounded-md text-sm hover:bg-pink-700 transition-colors"
                       >
                         Set Seat
                       </button>
-                    </td>
+                    </td> */}
                   </tr>
                 ))}
               </tbody>
