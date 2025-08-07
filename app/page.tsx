@@ -77,7 +77,9 @@ export default function RSVPPage() {
               Farida & Najib
             </h1>
             <div className="mt-2 pt-2 border-t border-amber-300/30">
-              <p className="text-amber-100 font-medium">Wedding Celebration</p>
+              <p className="text-amber-100 font-medium">
+                Reception Celebration
+              </p>
               <p className="text-amber-50 font-cormorant text-lg">
                 August 24, 2025 • 2:00 PM
               </p>
