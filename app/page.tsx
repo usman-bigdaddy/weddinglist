@@ -136,6 +136,19 @@ export default function RSVPPage() {
               We look forward to celebrating with you!
             </p>
           </div>
+          <div className="bg-amber-100/30 p-2 text-center border-t border-amber-200">
+            <p className="text-xs text-amber-600">
+              Built with ❤️ by{" "}
+              <a
+                href="https://www.softechseamless.com.ng/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline text-amber-700 font-medium"
+              >
+                SoftechSeamless
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     );
@@ -279,7 +292,19 @@ export default function RSVPPage() {
             </div>
           )}
         </div>
-
+        <div className="bg-amber-100/30 p-2 text-center border-t border-amber-200">
+          <p className="text-xs text-amber-600">
+            Built with ❤️ by{" "}
+            <a
+              href="https://www.softechseamless.com.ng/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline text-amber-700 font-medium"
+            >
+              Softech Seamless
+            </a>
+          </p>
+        </div>
         {/* Footer */}
         {/* <div className="bg-amber-100/50 p-4 text-center border-t border-amber-200">
           <p className="text-xs text-amber-600">

@@ -200,6 +200,21 @@ export default function BarcodeGenerator({ otp }: { otp: string }) {
       <p className="text-xs text-center px-4" style={{ color: "#831843" }}>
         Tip: Download or screenshot the IV for easy access at the venue
       </p>
+
+      {/* Added Footer Section */}
+      <div className="bg-pink-50 p-2 text-center border-t border-pink-200 mt-4">
+        <p className="text-xs text-pink-600">
+          Built with ❤️ by{" "}
+          <a
+            href="https://www.softechseamless.com.ng/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline text-pink-700 font-medium"
+          >
+            Softech Seamless
+          </a>
+        </p>
+      </div>
     </div>
   );
 }
